@@ -39,7 +39,7 @@ italic {
     font-weight: bold;
 }
 
-h2 {
+h2, h4 {
     text-align: center;
     color: white
 }
