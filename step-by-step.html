@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <link
+      rel="shortcut icon"
+      href="https://github.com/fluidicon.png"
+      title="GitHub"
+    />
+    <title>Documentação app walkthrough</title>
+    <script type="text/javascript" src="function.js"></script>
+  </head>
+  <body>
+    <nav class="main-menu">
+      <ul>
+        <li class="dropdown-menu">
+          <a href="#app-walkthrough">
+            <span class="nav-text"> Documentação app walkthrough </span>
+          </a>
+          <ul>
+            <li class="has-subnav">
+              <a href="#app-walkthrough-pass2">
+                <span class="nav-text">passo 2</span>
+              </a>
+            </li>
+          </ul>
+        </li>
+        <li class="has-subnav">
+          <a href="#">
+            <span class="nav-text"> Stars Components </span>
+          </a>
+        </li>
+        <li class="has-subnav">
+          <a href="#">
+            <span class="nav-text"> Forms </span>
+          </a>
+        </li>
+        <li class="has-subnav">
+          <a href="#">
+            <span class="nav-text"> Pages </span>
+          </a>
+        </li>
+        <li>
+          <a href="#">
+            <span class="nav-text"> Graphs and Statistics </span>
+          </a>
+        </li>
+        <li>
+          <a href="#">
+            <span class="nav-text"> Quotes </span>
+          </a>
+        </li>
+        <li>
+          <a href="#">
+            <span class="nav-text"> Tables </span>
+          </a>
+        </li>
+        <li>
+          <a href="#">
+            <span class="nav-text"> Maps </span>
+          </a>
+        </li>
+        <li>
+          <a href="#">
+            <span class="nav-text"> Documentation </span>
+          </a>
+        </li>
+        <li>
+          <a href="#">
+            <span class="nav-text"> Logout </span>
+          </a>
+        </li>
+      </ul>
+    </nav>
+
+    <div id="app-walkthrough" class="documents">
+      <h1>Documentação app walkthrough</h1>
+
+      <h2>Passo 1 : Hello World !</h2>
+
+      <p>
+        1) Crie uma nova pasta <italic>webapp</italic> que conterá todas as
+        fontes do aplicativo que criaremos ao longo deste tutorial.
+      </p>
+
+      <p>
+        2) Portanto, nos referimos a essa pasta como
+        <strong style="color: rgb(25, 175, 57)"> “pasta do aplicativo” </strong
+        >. Agora crie um novo arquivo <italic>HTML</italic> raiz chamado
+      <italic>index.html</italic> na pasta do seu aplicativo.
+      </p>
+
+      <p>
+        3) Um documento <italic>HTML</italic> consiste basicamente em duas
+        seções: <italic>Header & Body</italic>.
+      </p>
+
+      <p>
+        4) A parte principal será usada pelo navegador para processar o
+        documento. Usando meta tags, podemos influenciar o comportamento do
+        navegador. Nesse caso, diremos ao navegador para usar
+        <italic>UTF-8</italic> como o conjunto de caracteres do documento.<br />
+        <br />Também daremos ao nosso aplicativo um título que será exibido no
+        navegador.
+      </p>
+
+      <p>
+        5) Esteja ciente de que nosso título embutido em código pode ser anulado
+        pelo aplicativo, por exemplo, para mostrar um título no idioma do
+        usuário. A parte do corpo descreve o layout da página.
+      </p>
+
+      <p>
+        6) Em nosso caso, simplesmente exibimos
+        <strong style="color: rgb(25, 175, 57)">“Hello World”</strong> usando
+        uma tag p.
+      </p>
+
+      <div id="code">
+        <code>
+          <h3>>> Dica</h3>
+          <p>
+            Normalmente, o conteúdo da pasta do <italic>webapp</italic> é implantado em um
+            servidor da Web como um pacote de aplicativo. <br /><br />
+            Ao implantar a própria pasta <italic>webapp</italic>, o URL para acessar o arquivo
+          <italic>index.html </italic>contém <italic>webapp</italic> no ​​caminho.
+          </p>
+        </code>
+      </div>
+
+      <p>
+        7) Convenções Nomeie o arquivo <italic>HTML</italic> raiz do aplicativo <italic>index.html</italic> e
+        localize-o na pasta <italic>webapp</italic>.
+      </p>
+    </div>
+
+    <div id="app-walkthrough-pass2" class="documents">
+      <hr />
+      <h2>Passo 2 : Bootstrap</h2>
+
+      <div id="code">
+        <code>
+          <h3>>> Observação</h3>
+          <p>
+          <italic>SAPUI5</italic> é uma biblioteca JavaScript que pode ser carregada do mesmo
+            servidor Web em que o aplicativo reside ou de um servidor diferente.
+            <br /><br />
+            Se <italic>SAPUI5</italic> for implantado em outro lugar no servidor ou você deseja
+            usar um servidor diferente, então você precisa ajustar os caminhos
+            correspondentes no bootstrap (aqui: src = "/ resources /
+            sap-ui-core.js").<br /><br />
+            Neste tutorial de acordo com suas próprias necessidades. Você pode
+            usar esta referência para a versão estável mais recente do SAPUI5
+            para o tutorial ou para fins de teste, mas nunca use isso para uso
+            produtivo. Em um aplicativo real, você sempre deve especificar uma
+            versão <italic>SAPUI5</italic> explicitamente. <br /><br />Para obter mais
+            informações sobre o <italic>CDN</italic>, consulte Variante para inicialização da
+            rede de distribuição de conteúdo.
+          </p>
+        </code>
+      </div>
+
+      <h3><italic>webapp/index.html</italic></h3>
+
+      <div id="code">
+        <code>
+          <pre
+            class="codeblock"
+          ><span class="dec">&lt;!DOCTYPE html&gt;</span><span class="pln">
+          </span><span class="tag">&lt;html&gt;</span><span class="pln">
+          </span><span class="tag">&lt;head&gt;</span><span class="pln">
+            </span><span class="tag">&lt;meta</span><span class="pln"> </span><span class="atn">charset</span><span class="pun">=</span><span class="atv">"utf-8"</span><span class="tag">&gt;</span><span class="pln">
+            </span><span class="tag">&lt;title&gt;</span><span class="pln">SAPUI5 Walkthrough</span><span class="tag">&lt;/title&gt;</span><span class="pln">
+          </span><span class="emphasis"><span class="pln">	</span><span class="tag">&lt;script</span><span class="pln">
+              </span><span class="atn">id</span><span class="pun">=</span><span class="atv">"sap-ui-bootstrap"</span><span class="pln">
+              </span><span class="atn">src</span><span class="pun">=</span><span class="atv">"https://openui5.hana.ondemand.com/resources/sap-ui-core.js"</span><span class="pln">
+              </span><span class="atn">data-sap-ui-theme</span><span class="pun">=</span><span class="atv">"sap_belize"</span><span class="pln">
+              </span><span class="atn">data-sap-ui-libs</span><span class="pun">=</span><span class="atv">"sap.m"</span><span class="pln">
+              </span><span class="atn">data-sap-ui-compatVersion</span><span class="pun">=</span><span class="atv">"edge"</span><span class="pln">
+              </span><span class="atn">data-sap-ui-async</span><span class="pun">=</span><span class="atv">"true"</span><span class="pln">
+              </span><span class="atn">data-sap-ui-onInit</span><span class="pun">=</span><span class="atv">"module:sap/ui/demo/walkthrough/index"</span><span class="pln">
+              </span><span class="atn">data-sap-ui-resourceroots</span><span class="pun">=</span><span class="atv">'{
+                "sap.ui.demo.walkthrough": "./"
+              }'</span><span class="tag">&gt;</span><span class="pln">
+          
+            </span><span class="tag">&lt;/script&gt;</span></span><span class="pln">
+          </span><span class="tag">&lt;/head&gt;</span><span class="pln">
+          </span><span class="tag">&lt;body&gt;</span><span class="pln">
+          </span><span class="tag">&lt;div&gt;</span><span class="pln">Hello World</span><span class="tag">&lt;/div&gt;</span><span class="pln">
+          
+          </span><span class="tag">&lt;/body&gt;</span><span class="pln">
+          </span><span class="tag">&lt;/html&gt;</span></pre>
+        </code>
+      </div>
+
+      <p>
+        Nesta etapa, carregamos a estrutura <italic>SAPUI5</italic> de nosso servidor da web
+        local e inicializamos os módulos principais com as seguintes opções de
+        configuração:
+      </p>
+
+      <ol>
+        <li>
+          O atributo src da tag &lt;script&gt; informa ao navegador onde
+          encontrar a biblioteca principal <italic>SAPUI5</italic> - ele inicializa o tempo de
+          execução <italic>SAPUI5</italic> e carrega recursos adicionais, como as bibliotecas
+          especificadas no atributo <italic> data-sap-ui-libs </italic>.
+        </li>
+        <br />
+        <li>
+          Os controles <italic>SAPUI5</italic> suportam temas diferentes, escolhemos <italic>sap_belize</italic>
+          como nosso tema padrão.
+        </li>
+        <br />
+        <li>
+          Especificamos a biblioteca de <italic>IU</italic> necessária sap.m contendo os
+          controles de <italic>IU</italic> necessários para este tutorial.
+        </li>
+        <br />
+        <li>
+          Para fazer uso da funcionalidade mais recente do <italic>SAPUI5</italic>, definimos a
+          versão de compatibilidade como borda.
+        </li>
+        <br />
+        <li>
+          Configuramos o processo de <italic>“bootstrapping”</italic> para ser executado de forma
+          assíncrona.
+        </li>
+        <br />
+        <li>
+          Isso significa que os recursos <italic>SAPUI5</italic> podem ser carregados
+          simultaneamente em segundo plano por motivos de desempenho.
+        </li>
+        <br />
+        <li>
+          Definimos o módulo a ser carregado inicialmente de forma declarativa.
+          Com isso, evitamos código JavaScript executável diretamente no arquivo
+          <italic>HTML</italic>. Isso torna seu aplicativo mais seguro. <br />
+          <br /><br />Criaremos o script ao qual este se refere mais adiante
+          nesta etapa. Dizemos ao <italic> SAPUI5</italic> core que os recursos
+          no
+          <italic> namespace</italic>
+          <strong>sap.ui.demo.walkthrough</strong> estão localizados na mesma
+          pasta que <italic>index.html </italic>. Isso é, por exemplo, necessário para aplicativos
+          executados no <italic> SAP Fiori launchpad</italic>.
+        </li>
+      </ol>
+
+      <h3><italic>webapp/index.js (New)</italic></h3>
+
+      <div id="code">
+        <code>
+          <pre
+            class="codeblock"
+          ><span class="pln">sap</span><span class="pun">.</span><span class="pln">ui</span><span class="pun">.</span><span class="pln">define</span><span class="pun">([</span><span class="pln">
+
+          </span><span class="pun">],</span><span class="pln"> </span><span class="kwd">function</span><span class="pln"> </span><span class="pun">()</span><span class="pln"> </span><span class="pun">{</span><span class="pln">
+            </span><span class="str">"use strict"</span><span class="pun">;</span><span class="pln">
+          
+          
+            alert</span><span class="pun">(</span><span class="str">"UI5 is ready"</span><span class="pun">);</span><span class="pln">
+          </span><span class="pun">});</span></pre>
+        </code>
+      </div>
+
+      <p>
+        Agora, criamos um novo script <italic> index.js </italic>
+        que conterá a lógica do aplicativo para esta etapa do tutorial. <br /><br /> Fazemos
+        isso para evitar o código executável diretamente no arquivo <italic>HTML</italic> por
+        motivos de segurança. <br />
+        <br />Este script será chamado pelo <italic> index.html </italic>. Definimos lá como um
+        módulo de forma declarativa.
+      </p>
+    </div>
+
+    <div class="target">
+      <img src="https://github.com/fluidicon.png" height="20" alt="logo" />
+      <a href="https://github.com/">Github Corner</a>
+    </div>
+  </body>
+</html>
