@@ -1,7 +1,35 @@
 /* Responsible Design  */
-@media (min-width:320px) and (max-width:480px){
-    .sidemenu {
+@media screen and (max-width:480px){
+
+    div {
+        padding: 0px;
+    }
+
+    code {
+        padding:0;
+    }
+
+    p, ul , li , a{
+        font-size:12px;
+        padding:20px;
+    }
+
+    .main-menu {
         display: none;
         
     }
+
+    #code {
+
+        padding:0;
+        font-size:12px;
+    }
+    .codeblock{
+  
+        padding:0;
+    }
+    .documents{
+        padding-left:0px !important;
+        line-break: strict;
+    }    
 }   
