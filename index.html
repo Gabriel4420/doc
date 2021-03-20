@@ -95,7 +95,7 @@
         2) Portanto, nos referimos a essa pasta como
         <strong style="color: rgb(25, 175, 57)"> “pasta do aplicativo” </strong
         >. Agora crie um novo arquivo <italic>HTML</italic> raiz chamado
-      <italic>index.html</italic> na pasta do seu aplicativo.
+        <italic>index.html</italic> na pasta do seu aplicativo.
       </p>
 
       <p>
@@ -128,17 +128,20 @@
         <code>
           <h3>>> Dica</h3>
           <p>
-            Normalmente, o conteúdo da pasta do <italic>webapp</italic> é implantado em um
-            servidor da Web como um pacote de aplicativo. <br /><br />
-            Ao implantar a própria pasta <italic>webapp</italic>, o URL para acessar o arquivo
-          <italic>index.html </italic>contém <italic>webapp</italic> no ​​caminho.
+            Normalmente, o conteúdo da pasta do <italic>webapp</italic> é
+            implantado em um servidor da Web como um pacote de aplicativo.
+            <br /><br />
+            Ao implantar a própria pasta <italic>webapp</italic>, o URL para
+            acessar o arquivo <italic>index.html </italic>contém
+            <italic>webapp</italic> no ​​caminho.
           </p>
         </code>
       </div>
 
       <p>
-        7) Convenções Nomeie o arquivo <italic>HTML</italic> raiz do aplicativo <italic>index.html</italic> e
-        localize-o na pasta <italic>webapp</italic>.
+        7) Convenções Nomeie o arquivo <italic>HTML</italic> raiz do aplicativo
+        <italic>index.html</italic> e localize-o na pasta
+        <italic>webapp</italic>.
       </p>
     </div>
 
@@ -150,20 +153,20 @@
         <code>
           <h3>>> Observação</h3>
           <p>
-          <italic>SAPUI5</italic> é uma biblioteca JavaScript que pode ser carregada do mesmo
-            servidor Web em que o aplicativo reside ou de um servidor diferente.
-            <br /><br />
-            Se <italic>SAPUI5</italic> for implantado em outro lugar no servidor ou você deseja
-            usar um servidor diferente, então você precisa ajustar os caminhos
-            correspondentes no bootstrap (aqui: src = "/ resources /
-            sap-ui-core.js").<br /><br />
+            <italic>SAPUI5</italic> é uma biblioteca JavaScript que pode ser
+            carregada do mesmo servidor Web em que o aplicativo reside ou de um
+            servidor diferente. <br /><br />
+            Se <italic>SAPUI5</italic> for implantado em outro lugar no servidor
+            ou você deseja usar um servidor diferente, então você precisa
+            ajustar os caminhos correspondentes no bootstrap (aqui: src = "/
+            resources / sap-ui-core.js").<br /><br />
             Neste tutorial de acordo com suas próprias necessidades. Você pode
             usar esta referência para a versão estável mais recente do SAPUI5
             para o tutorial ou para fins de teste, mas nunca use isso para uso
             produtivo. Em um aplicativo real, você sempre deve especificar uma
-            versão <italic>SAPUI5</italic> explicitamente. <br /><br />Para obter mais
-            informações sobre o <italic>CDN</italic>, consulte Variante para inicialização da
-            rede de distribuição de conteúdo.
+            versão <italic>SAPUI5</italic> explicitamente. <br /><br />Para
+            obter mais informações sobre o <italic>CDN</italic>, consulte
+            Variante para inicialização da rede de distribuição de conteúdo.
           </p>
         </code>
       </div>
@@ -202,42 +205,46 @@
       </div>
 
       <p>
-        Nesta etapa, carregamos a estrutura <italic>SAPUI5</italic> de nosso servidor da web
-        local e inicializamos os módulos principais com as seguintes opções de
-        configuração:
+        Nesta etapa, carregamos a estrutura <italic>SAPUI5</italic> de nosso
+        servidor da web local e inicializamos os módulos principais com as
+        seguintes opções de configuração:
       </p>
 
       <ol>
         <li>
           O atributo src da tag &lt;script&gt; informa ao navegador onde
-          encontrar a biblioteca principal <italic>SAPUI5</italic> - ele inicializa o tempo de
-          execução <italic>SAPUI5</italic> e carrega recursos adicionais, como as bibliotecas
-          especificadas no atributo <italic> data-sap-ui-libs </italic>.
+          encontrar a biblioteca principal <italic>SAPUI5</italic> - ele
+          inicializa o tempo de execução <italic>SAPUI5</italic> e carrega
+          recursos adicionais, como as bibliotecas especificadas no atributo
+          <italic> data-sap-ui-libs </italic>.
         </li>
         <br />
         <li>
-          Os controles <italic>SAPUI5</italic> suportam temas diferentes, escolhemos <italic>sap_belize</italic>
+          Os controles <italic>SAPUI5</italic> suportam temas diferentes,
+          escolhemos <italic>sap_belize</italic>
           como nosso tema padrão.
         </li>
         <br />
         <li>
-          Especificamos a biblioteca de <italic>IU</italic> necessária sap.m contendo os
-          controles de <italic>IU</italic> necessários para este tutorial.
+          Especificamos a biblioteca de <italic>IU</italic> necessária sap.m
+          contendo os controles de <italic>IU</italic> necessários para este
+          tutorial.
         </li>
         <br />
         <li>
-          Para fazer uso da funcionalidade mais recente do <italic>SAPUI5</italic>, definimos a
-          versão de compatibilidade como borda.
+          Para fazer uso da funcionalidade mais recente do
+          <italic>SAPUI5</italic>, definimos a versão de compatibilidade como
+          borda.
         </li>
         <br />
         <li>
-          Configuramos o processo de <italic>“bootstrapping”</italic> para ser executado de forma
-          assíncrona.
+          Configuramos o processo de <italic>“bootstrapping”</italic> para ser
+          executado de forma assíncrona.
         </li>
         <br />
         <li>
-          Isso significa que os recursos <italic>SAPUI5</italic> podem ser carregados
-          simultaneamente em segundo plano por motivos de desempenho.
+          Isso significa que os recursos <italic>SAPUI5</italic> podem ser
+          carregados simultaneamente em segundo plano por motivos de desempenho.
         </li>
         <br />
         <li>
@@ -249,8 +256,9 @@
           no
           <italic> namespace</italic>
           <strong>sap.ui.demo.walkthrough</strong> estão localizados na mesma
-          pasta que <italic>index.html </italic>. Isso é, por exemplo, necessário para aplicativos
-          executados no <italic> SAP Fiori launchpad</italic>.
+          pasta que <italic>index.html </italic>. Isso é, por exemplo,
+          necessário para aplicativos executados no
+          <italic> SAP Fiori launchpad</italic>.
         </li>
       </ol>
 
@@ -272,13 +280,24 @@
       </div>
 
       <p>
-        Agora, criamos um novo script <italic> index.js </italic>
-        que conterá a lógica do aplicativo para esta etapa do tutorial. <br /><br /> Fazemos
-        isso para evitar o código executável diretamente no arquivo <italic>HTML</italic> por
-        motivos de segurança. <br />
-        <br />Este script será chamado pelo <italic> index.html </italic>. Definimos lá como um
-        módulo de forma declarativa.
+        Agora, criamos um novo script <italic> index.js </italic> que conterá a
+        lógica do aplicativo para esta etapa do tutorial. <br /><br />
+        Fazemos isso para evitar o código executável diretamente no arquivo
+        <italic>HTML</italic> por motivos de segurança. <br />
+        <br />Este script será chamado pelo <italic> index.html </italic>.
+        Definimos lá como um módulo de forma declarativa.
       </p>
+    </div>
+
+    <div id="app-walkthrough-pass3" class="documents">
+      <hr>
+
+      <h1>Etapa 3: controles</h1> 
+      
+      <p>Agora é hora de construir nossa primeira pequena <italic>IU</italic>
+      substituindo o texto <italic>“Hello World”</italic> no corpo do <italic> HTML </italic> pelo controle <italic>SAPUI5</italic>
+      <italic>sap.m.Text.</italic> <br><br> No início, usaremos a interface de controle <italic>JavaScript</italic> para
+      configurar a <italic>IU</italic>, a instância de controle é então colocada no corpo <italic>HTML</italic>.</p>
     </div>
 
     <div class="target">
