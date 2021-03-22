@@ -35,17 +35,6 @@
 </h4> 
 
 <hr> -->
-
-<p align="center">
-  <a href="#dart-sobre">Sobre</a> &#xa0; | &#xa0; 
-
-
-  <a href="#memo-licença">Licença</a> &#xa0; | &#xa0;
-  <a href="https://github.com/Gabriel4420" target="_blank">Autor</a>
-</p>
-
-<br>
-
 ## :dart: Sobre ##
 
 Documentação não official do SAP OpenUI5 em
