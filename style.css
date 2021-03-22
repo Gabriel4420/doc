@@ -55,7 +55,7 @@ h4{
 }
 
 h3 {
-    color: green;
+    color: rgb(0, 255, 55);
 }
 /* Espaçamento */
 
@@ -73,7 +73,7 @@ div {
     line-height: 20px;
     padding: 20px;
     font-size: 20px;
-    border-left: 8px solid green;
+    border-left: 8px solid rgb(0, 255, 55);
 }
 
 .codeblock{
