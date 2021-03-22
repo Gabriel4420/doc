@@ -1,7 +1,7 @@
 <div align="center" id="top"> 
   
   &#xa0;
-  <img src="image/HomeApp.png" alt="Home App">
+  <img src="image/HomeApp2.png" alt="Home App">
 
   <!-- <a href="https://doc.netlify.com">Demo</a> -->
 </div>
