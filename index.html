@@ -5,14 +5,14 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="style.css" />
-    <link rel="stylesheet" href="Responsive.css">
+    <link rel="stylesheet" href="Responsive.css" />
     <link
       rel="shortcut icon"
       href="https://github.com/fluidicon.png"
       title="GitHub"
     />
-    
-    <title>Documentação Open UI5</title>
+
+    <title>Documentação não oficial Open UI5</title>
     <script type="text/javascript" src="function.js"></script>
   </head>
   <body>
@@ -128,7 +128,7 @@
 
       <div id="code">
         <code>
-          <h3> &gt;&gt; Dica</h3>
+          <h3>&gt;&gt; Dica</h3>
           <p>
             Normalmente, o conteúdo da pasta do <italic>webapp</italic> é
             implantado em um servidor da Web como um pacote de aplicativo.
@@ -151,9 +151,9 @@
       <hr />
       <h2>Passo 2 : Bootstrap</h2>
 
-      <div id="code" >
+      <div id="code">
         <code>
-          <h3> &gt;&gt; Observação</h3>
+          <h3>&gt;&gt; Observação</h3>
           <p>
             <italic>SAPUI5</italic> é uma biblioteca JavaScript que pode ser
             carregada do mesmo servidor Web em que o aplicativo reside ou de um
@@ -289,19 +289,81 @@
         <br />Este script será chamado pelo <italic> index.html </italic>.
         Definimos lá como um módulo de forma declarativa.
       </p>
-
     </div>
 
     <div id="app-walkthrough-pass3" class="documents">
-      <hr>
+      <hr />
 
-      <h2>Passo 3: controles</h2> 
-      
-      <p>Agora é hora de construir nossa primeira pequena <italic>IU</italic>
-      substituindo o texto <italic>“Hello World”</italic> no corpo do <italic> HTML </italic> pelo controle <italic>SAPUI5</italic>
-      <italic>sap.m.Text.</italic> <br><br> No início, usaremos a interface de controle <italic>JavaScript</italic> para
-      configurar a <italic>IU</italic>, a instância de controle é então colocada no corpo <italic>HTML</italic>.</p>
-    
+      <h2>Passo 3: controles</h2>
+
+      <p>
+        Agora é hora de construir nossa primeira pequena
+        <italic>IU</italic> substituindo o texto
+        <italic>“Hello World”</italic> no corpo do <italic> HTML </italic> pelo
+        controle <italic>SAPUI5</italic> <italic>sap.m.Text.</italic>
+        <br /><br />
+        No início, usaremos a interface de controle
+        <italic>JavaScript</italic> para configurar a <italic>IU</italic>, a
+        instância de controle é então colocada no corpo <italic>HTML</italic>.
+      </p>
+
+      <h4>Preview</h4>
+
+      <div class="preview">
+        <img
+          src="https://sapui5.hana.ondemand.com/docs/topics/loio7cad93a924694474acd782b34e162d4b_HiRes.png"
+          alt="preview de resultado"
+          width="500"
+        />
+        
+      </div>
+      <br/>
+
+      <p style="text-align: justify;">
+        O texto de <italic> "Hello World"</italic> está sendo mostrado pelo
+        controlador <italic>SAPUI5 </italic>.
+      </p>
+
+      <h4> <italic> webapp/index.html (New) </italic> </h4>
+
+      <div id="code">
+        <code>
+          <pre class="codeblock"><span class="dec">&lt;!DOCTYPE html&gt;</span><span class="pln">
+          </span><span class="tag">&lt;html&gt;</span><span class="pln">
+          </span><span class="tag">&lt;head&gt;</span><span class="pln">
+            </span><span class="tag">&lt;meta</span><span class="pln"> </span><span class="atn">charset</span><span class="pun">=</span><span class="atv">"utf-8"</span><span class="tag">&gt;</span><span class="pln">
+            </span><span class="tag">&lt;title&gt;</span><span class="pln">SAPUI5 Walkthrough</span><span class="tag">&lt;/title&gt;</span><span class="pln">
+            </span><span class="tag">&lt;script</span><span class="pln">
+              </span><span class="atn">id</span><span class="pun">=</span><span class="atv">"sap-ui-bootstrap"</span><span class="pln">
+              </span><span class="atn">src</span><span class="pun">=</span><span class="atv">"https://openui5.hana.ondemand.com/resources/sap-ui-core.js"</span><span class="pln">
+              </span><span class="atn">data-sap-ui-theme</span><span class="pun">=</span><span class="atv">"sap_belize"</span><span class="pln">
+              </span><span class="atn">data-sap-ui-libs</span><span class="pun">=</span><span class="atv">"sap.m"</span><span class="pln">
+              </span><span class="atn">data-sap-ui-compatVersion</span><span class="pun">=</span><span class="atv">"edge"</span><span class="pln">
+              </span><span class="atn">data-sap-ui-async</span><span class="pun">=</span><span class="atv">"true"</span><span class="pln">
+              </span><span class="atn">data-sap-ui-onInit</span><span class="pun">=</span><span class="atv">"module:sap/ui/demo/walkthrough/index"</span><span class="pln">
+              </span><span class="atn">data-sap-ui-resourceroots</span><span class="pun">=</span><span class="atv">'{
+                "sap.ui.demo.walkthrough": "./"
+              }'</span><span class="tag">&gt;</span><span class="pln">
+            </span><span class="tag">&lt;/script&gt;</span><span class="pln">
+          </span><span class="tag">&lt;/head&gt;</span><span class="pln">
+          </span><span class="emphasis"><span class="tag">&lt;body</span><span class="pln"> </span><span class="atn">class</span><span class="pun">=</span><span class="atv">"sapUiBody"</span><span class="pln"> </span><span class="atn">id</span><span class="pun">=</span><span class="atv">"content"</span><span class="tag">&gt;</span><span class="pln">
+          </span><span class="tag">&lt;/body&gt;</span><span class="pln">
+          </span></span><span class="pln">
+          </span><span class="tag">&lt;/html&gt;</span></pre>
+        </code>
+      </div>
+
+      <p>
+        A classe <italic>sapUiBody</italic> adiciona estilos dependentes de tema adicionais para exibir aplicativos <italic>SAPUI5</italic>. 
+      </p>
+
+      <h4><italic> webapp/index.js </italic></h4>
+
+
+      <div id="code">
+        <code></code>
+      </div>
+
     </div>
 
     <div class="target">
