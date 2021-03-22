@@ -133,38 +133,39 @@
 
       <h2>Passo 1 : Hello World !</h2>
 
-      <p style="line-height: 40px;">
+      <p style="line-height: 40px">
         1) Crie uma nova pasta <italic>webapp</italic> que conterá todas as
         fontes do aplicativo que criaremos ao longo deste tutorial.
       </p>
 
-      <p style="line-height: 40px;">
+      <p style="line-height: 40px">
         2) Portanto, nos referimos a essa pasta como
         <strong style="color: rgb(0, 255, 55)"> “pasta do aplicativo” </strong>.
         Agora crie um novo arquivo <italic>HTML</italic> raiz chamado
         <italic>index.html</italic> na pasta do seu aplicativo.
       </p>
 
-      <p style="line-height: 40px;">
+      <p style="line-height: 40px">
         3) Um documento <italic>HTML</italic> consiste basicamente em duas
         seções: <italic>Header & Body</italic>.
       </p>
 
-      <p style="line-height: 40px;">
+      <p style="line-height: 40px">
         4) A parte principal será usada pelo navegador para processar o
         documento. Usando meta tags, podemos influenciar o comportamento do
         navegador. Nesse caso, diremos ao navegador para usar
-        <italic>UTF-8</italic> como o conjunto de caracteres do documento. Também daremos ao nosso aplicativo um título que será exibido no
+        <italic>UTF-8</italic> como o conjunto de caracteres do documento.
+        Também daremos ao nosso aplicativo um título que será exibido no
         navegador.
       </p>
 
-      <p style="line-height: 40px;">
+      <p style="line-height: 40px">
         5) Esteja ciente de que nosso título embutido em código pode ser anulado
         pelo aplicativo, por exemplo, para mostrar um título no idioma do
         usuário. A parte do corpo descreve o layout da página.
       </p>
 
-      <p style="line-height: 40px;">
+      <p style="line-height: 40px">
         6) Em nosso caso, simplesmente exibimos
         <strong style="color: rgb(0, 255, 55)">“Hello World”</strong> usando uma
         tag p.
@@ -174,12 +175,15 @@
         <code>
           <h3>&#x2757; Dica</h3>
           <p>
-            Normalmente, o conteúdo da pasta do <italic style="color: rgb(197, 25, 25)">webapp</italic> é
-            implantado em um servidor da Web como um pacote de aplicativo.
-            <br /><br />
-            Ao implantar a própria pasta <italic style="color: rgb(197, 25, 25)">webapp</italic>, o URL para
-            acessar o arquivo <italic style="color: rgb(197, 25, 25)">index.html </italic>contém
-            <italic style="color: rgb(197, 25, 25)">webapp</italic> no ​​caminho.
+            Normalmente, o conteúdo da pasta do
+            <italic style="color: rgb(197, 25, 25)">webapp</italic> é implantado
+            em um servidor da Web como um pacote de aplicativo. <br /><br />
+            Ao implantar a própria pasta
+            <italic style="color: rgb(197, 25, 25)">webapp</italic>, o URL para
+            acessar o arquivo
+            <italic style="color: rgb(197, 25, 25)">index.html </italic>contém
+            <italic style="color: rgb(197, 25, 25)">webapp</italic> no
+            ​​caminho.
           </p>
         </code>
       </div>
@@ -198,20 +202,26 @@
       <div id="code">
         <code>
           <h3>&#x2757; Observação</h3>
-          <p style="line-height: 40px;">
-            <italic style="color: rgb(197, 25, 25)">SAPUI5</italic> é uma biblioteca JavaScript que pode ser
-            carregada do mesmo servidor Web em que o aplicativo reside ou de um
-            servidor diferente. <br /><br />
-            Se <italic style="color: rgb(197, 25, 25)">SAPUI5</italic> for implantado em outro lugar no servidor
-            ou você deseja usar um servidor diferente, então você precisa
-            ajustar os caminhos correspondentes no <italic style="color: rgb(197, 25, 25)">bootstrap (aqui: src = "/
-            resources / sap-ui-core.js") </italic>.<br /><br />
+          <p style="line-height: 40px">
+            <italic style="color: rgb(197, 25, 25)">SAPUI5</italic> é uma
+            biblioteca JavaScript que pode ser carregada do mesmo servidor Web
+            em que o aplicativo reside ou de um servidor diferente. <br /><br />
+            Se <italic style="color: rgb(197, 25, 25)">SAPUI5</italic> for
+            implantado em outro lugar no servidor ou você deseja usar um
+            servidor diferente, então você precisa ajustar os caminhos
+            correspondentes no
+            <italic style="color: rgb(197, 25, 25)"
+              >bootstrap (aqui: src = "/ resources / sap-ui-core.js") </italic
+            >.<br /><br />
             Neste tutorial de acordo com suas próprias necessidades. Você pode
-            usar esta referência para a versão estável mais recente do <italic style="color: rgb(197, 25, 25)">SAPUI5</italic>
-            para o tutorial ou para fins de teste, mas nunca use isso para uso
+            usar esta referência para a versão estável mais recente do
+            <italic style="color: rgb(197, 25, 25)">SAPUI5</italic> para o
+            tutorial ou para fins de teste, mas nunca use isso para uso
             produtivo. Em um aplicativo real, você sempre deve especificar uma
-            versão <italic style="color: rgb(197, 25, 25)">SAPUI5</italic> explicitamente. <br /><br />Para
-            obter mais informações sobre o <italic style="color: rgb(197, 25, 25)">CDN</italic>, consulte
+            versão
+            <italic style="color: rgb(197, 25, 25)">SAPUI5</italic>
+            explicitamente. <br /><br />Para obter mais informações sobre o
+            <italic style="color: rgb(197, 25, 25)">CDN</italic>, consulte
             Variante para inicialização da rede de distribuição de conteúdo.
           </p>
         </code>
@@ -259,14 +269,14 @@
         </italic>
       </p>
 
-      <p style="line-height: 40px;">
+      <p style="line-height: 40px">
         Nesta etapa, carregamos a estrutura <italic>SAPUI5</italic> de nosso
         servidor da web local e inicializamos os módulos principais com as
         seguintes opções de configuração:
       </p>
 
       <ol>
-        <li >
+        <li>
           O atributo src da tag &lt;script&gt; informa ao navegador onde
           encontrar a biblioteca principal <italic>SAPUI5</italic> - ele
           inicializa o tempo de execução <italic>SAPUI5</italic> e carrega
@@ -492,10 +502,14 @@
           <h3>&#x2757; Nota</h3>
 
           <p>
-            Apenas as instâncias de <italic style="color: rgb(197, 25, 25)"> sap.ui.core</italic>.
-            <italic style="color: rgb(197, 25, 25)">Control</italic> ou suas subclasses podem ser renderizadas
-            de forma autônoma e ter uma função <italic style="color: rgb(197, 25, 25)">placeAt</italic>. Cada
-            controle estende <italic style="color: rgb(197, 25, 25)">sap.ui.core</italic>. <br /><br />
+            Apenas as instâncias de
+            <italic style="color: rgb(197, 25, 25)"> sap.ui.core</italic>.
+            <italic style="color: rgb(197, 25, 25)">Control</italic> ou suas
+            subclasses podem ser renderizadas de forma autônoma e ter uma função
+            <italic style="color: rgb(197, 25, 25)">placeAt</italic>. Cada
+            controle estende
+            <italic style="color: rgb(197, 25, 25)">sap.ui.core</italic>.
+            <br /><br />
             Elemento que só pode ser renderizado dentro dos controles. Verifique
             <a
               href="https://sapui5.hana.ondemand.com/#/topic/ddbceecd7d3d42eea9cf78a820a238fb"
@@ -516,14 +530,14 @@
     <div id="app-walkthrough-pass4" class="documents">
       <hr />
       <h2>Passo 4: XML Views</h2>
-      <p style="line-height: 40px;">
+      <p style="line-height: 40px">
         Colocar toda a nossa<italic> IU</italic> no arquivo
         <italic>index.html</italic> muito em breve resultará em uma configuração
         confusa e há muito trabalho pela frente. Então, vamos fazer uma primeira
         modularização, colocando o controle <italic>sap.m.Text</italic>
         em uma visualização dedicada.
       </p>
-      <p style="line-height: 40px;">
+      <p style="line-height: 40px">
         <italic>SAPUI5</italic> suporta vários tipos de visualização
         <italic>(XML, HTML, JavaScript)</italic>. <br />
         <br />Escolhemos <italic>XML</italic> porque ele produz o código mais
@@ -533,12 +547,13 @@
       </p>
 
       <h4>Preview</h4>
-      <br /> <br /> 
+      <br />
+      <br />
       <img
         src="https://sapui5.hana.ondemand.com/docs/topics/loioc1d7d89b92c14f7ea88af6771d962f72_HiRes.png"
         alt="Hello World"
       />
-      <p style="line-height: 40px;">
+      <p style="line-height: 40px">
         O texto
         <strong style="color: rgb(0, 255, 55)">"Hello World"</strong> agora é
         exibido por um controle <italic>SAPUI5</italic> (sem alterações visuais
@@ -556,19 +571,49 @@
         </code>
       </div>
 
-      <p style="line-height: 40px;">
+      <p style="line-height: 40px">
         Criamos uma nova pasta de visualização em nosso aplicativo e um novo
-        arquivo para nossa visualização <italic> XML </italic> dentro da pasta do aplicativo. O nó
-        raiz da estrutura <italic>XML</italic> é a visualização. <br/> <br/> Aqui, referimos o namespace
-        padrão <italic>sap.m</italic> onde a maioria de nossos ativos de <italic>IU</italic> estão localizados.
-        Definimos um <italic>namespace sap.ui.core.mvc</italic> adicional com alias  <italic>mvc</italic>, onde as
-        visualizações <italic>SAPUI5</italic> e todos os outros ativos <italic>Model-View-Controller</italic>
+        arquivo para nossa visualização <italic> XML </italic> dentro da pasta
+        do aplicativo. O nó raiz da estrutura <italic>XML</italic> é a
+        visualização. <br />
+        <br />
+        Aqui, referimos o namespace padrão <italic>sap.m</italic> onde a maioria
+        de nossos ativos de <italic>IU</italic> estão localizados. Definimos um
+        <italic>namespace sap.ui.core.mvc</italic> adicional com alias
+        <italic>mvc</italic>, onde as visualizações <italic>SAPUI5</italic> e
+        todos os outros ativos <italic>Model-View-Controller</italic>
         <italic>(MVC)</italic> estão localizados.
       </p>
+
+      <div id="code">
+        <code>
+          <h3>&#x2757; Nota</h3>
+          <p>
+            O
+            <italic style="color: rgb(197, 25, 25)">namespace</italic>
+            identifica todos os recursos do projeto e deve ser exclusivo. Se
+            você desenvolver seu próprio código de aplicativo ou controles, não
+            poderá usar o prefixo de
+            <italic style="color: rgb(197, 25, 25)">namespace sap</italic>,
+            porque esse namespace é reservado para recursos
+            <italic style="color: rgb(197, 25, 25)">SAP</italic>. Em vez disso,
+            basta definir seu próprio
+            <italic style="color: rgb(197, 25, 25)">namespace</italic> exclusivo
+            <italic style="color: rgb(197, 25, 25)"
+              >(por exemplo, myCompany.myApp)</italic
+            >.
+          </p>
+        </code>
+      </div>
     </div>
     <!-- Corner GitHub -->
     <div class="target">
-      <a href="https://github.com/">Github Corner</a>
+      <a
+        href="https://github.com/Gabriel4420?tab=repositories"
+        target="_blank"
+        rel="noreferrer"
+        >Github Corner</a
+      >
       <img src="https://github.com/fluidicon.png" height="30" alt="logo" />
     </div>
   </body>
