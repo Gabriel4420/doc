@@ -16,7 +16,10 @@
         word-wrap: break-word;
     }
 
-    div#app-walkthrough, div#app-walkthrough-pass2, div#app-walkthrough-pass3{
+    div#app-walkthrough, 
+    div#app-walkthrough-pass2, 
+    div#app-walkthrough-pass3, 
+    div#app-walkthrough-pass4{
         align-items: center;
         padding-left:10px;
         font-size:12px;
@@ -26,7 +29,10 @@
         word-wrap: break-word;
     }
 
-    div#app-walkthrough p, div#app-walkthrough-pass2 p , div#app-walkthrough-pass3 p{
+    div#app-walkthrough p, 
+    div#app-walkthrough-pass2 p , 
+    div#app-walkthrough-pass3 p,
+    div#app-walkthrough-pass4 p{
         padding:20px;
     }
 
@@ -34,7 +40,13 @@
         margin-left:-10px;
     }
 
-    #app-walkthrough code, #app-walkthrough-pass2 code, #app-walkthrough-pass3 code{
+    #app-walkthrough-pass4 img{
+        margin-left:60px;
+    }
+
+    #app-walkthrough code, 
+    #app-walkthrough-pass2 code, 
+    #app-walkthrough-pass3 code{
         display: flex;
         align-items: center;
         justify-content: center;
@@ -103,17 +115,22 @@
         word-wrap: break-word;
     }
 
-    div#app-walkthrough, div#app-walkthrough-pass2, div#app-walkthrough-pass3{
+    div#app-walkthrough, 
+    div#app-walkthrough-pass2, 
+    div#app-walkthrough-pass3, 
+    div#app-walkthrough-pass4{
         align-items: center;
         padding-left:10px;
         font-size:12px;
-
         overflow: hidden;
         width:100vw;    
         word-wrap: break-word;
     }
 
-    div#app-walkthrough p, div#app-walkthrough-pass2 p , div#app-walkthrough-pass3 p{
+    div#app-walkthrough p, 
+    div#app-walkthrough-pass2 p , 
+    div#app-walkthrough-pass3 p,
+    div#app-walkthrough-pass4 p{
         padding:20px;
     }
 
@@ -121,7 +138,13 @@
         margin-left:150px;
     }
 
-    #app-walkthrough code, #app-walkthrough-pass2 code, #app-walkthrough-pass3 code{
+    #app-walkthrough-pass4 img{
+        margin-left:250px;
+    }
+
+    #app-walkthrough code, 
+    #app-walkthrough-pass2 code, 
+    #app-walkthrough-pass3 code{
         display: flex;
         align-items: center;
         justify-content: center;

@@ -69,7 +69,6 @@ div {
 #code {
     background-color: #aa8aa5;
     color: black;
-    font-weight: bold;
     line-height: 20px;
     padding: 20px;
     font-size: 20px;
@@ -174,7 +173,8 @@ a.link,.link2{
 
 a.link2{
     font-size:20px;
-    color:black;
+    color:rgb(0, 255, 55);
+    background-color:rgb(26, 24, 24);
 }
 
 a.link:hover, .link2:hover{
