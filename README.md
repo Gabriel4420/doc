@@ -37,7 +37,7 @@
 <hr> -->
 ## :dart: Sobre ##
 
-Documentação não official do SAP OpenUI5 em
+Documentação não official do SAP OpenUI5
 
 
 Feito com :heart: por <a href="https://github.com/Gabriel4420" target="_blank">Gabriel Rodrigues Perez</a>
