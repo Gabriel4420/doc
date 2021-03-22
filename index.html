@@ -84,7 +84,7 @@
     </nav>
 
     <div id="app-walkthrough" class="documents">
-      <h1>Documentação app walkthrough</h1>
+      <h1>Documentação Open UI5</h1>
 
       <h2>Passo 1 : Hello World !</h2>
 
@@ -153,7 +153,7 @@
 
       <div id="code">
         <code>
-          <h3>&gt;&gt; Observação</h3>
+            <h3>&gt;&gt; Observação</h3>
           <p>
             <italic>SAPUI5</italic> é uma biblioteca JavaScript que pode ser
             carregada do mesmo servidor Web em que o aplicativo reside ou de um
@@ -315,20 +315,21 @@
           alt="preview de resultado"
           width="500"
         />
-        
       </div>
-      <br/>
+      <br />
 
-      <p style="text-align: justify;">
+      <p style="text-align: justify">
         O texto de <italic> "Hello World"</italic> está sendo mostrado pelo
         controlador <italic>SAPUI5 </italic>.
       </p>
 
-      <h4> <italic> webapp/index.html (New) </italic> </h4>
+      <h4><italic> webapp/index.html (New) </italic></h4>
 
       <div id="code">
         <code>
-          <pre class="codeblock"><span class="dec">&lt;!DOCTYPE html&gt;</span><span class="pln">
+          <pre
+            class="codeblock"
+          ><span class="dec">&lt;!DOCTYPE html&gt;</span><span class="pln">
           </span><span class="tag">&lt;html&gt;</span><span class="pln">
           </span><span class="tag">&lt;head&gt;</span><span class="pln">
             </span><span class="tag">&lt;meta</span><span class="pln"> </span><span class="atn">charset</span><span class="pun">=</span><span class="atv">"utf-8"</span><span class="tag">&gt;</span><span class="pln">
@@ -354,16 +355,43 @@
       </div>
 
       <p>
-        A classe <italic>sapUiBody</italic> adiciona estilos dependentes de tema adicionais para exibir aplicativos <italic>SAPUI5</italic>. 
+        A classe <italic>sapUiBody</italic> adiciona estilos dependentes de tema
+        adicionais para exibir aplicativos <italic>SAPUI5</italic>.
       </p>
 
       <h4><italic> webapp/index.js </italic></h4>
 
-
       <div id="code">
-        <code></code>
+        <code>
+          <pre
+            class="codeblock"
+          ><span class="pln">sap</span><span class="pun">.</span><span class="pln">ui</span><span class="pun">.</span><span class="pln">define</span><span class="pun">([</span><span class="pln">
+          </span><span class="emphasis"><span class="pln">	</span><span class="str">"sap/m/Text"</span><span class="pln">
+          </span></span><span class="pln">
+          </span><span class="pun">],</span><span class="pln"> </span><span class="kwd">function</span><span class="pln"> </span><span class="pun">(</span><span class="emphasis"><span class="typ">Text</span></span><span class="pun">)</span><span class="pln"> </span><span class="pun">{</span><span class="pln">
+            </span><span class="str">"use strict"</span><span class="pun">;</span><span class="pln">
+          
+          </span><span class="emphasis"><span class="pln">	</span><span class="kwd">new</span><span class="pln"> </span><span class="typ">Text</span><span class="pun">({</span><span class="pln">
+              text</span><span class="pun">:</span><span class="pln"> </span><span class="str">"Hello World"</span><span class="pln">
+            </span><span class="pun">}).</span><span class="pln">placeAt</span><span class="pun">(</span><span class="str">"content"</span><span class="pun">);</span><span class="pln">
+          </span></span><span class="pln">
+          </span><span class="pun">});</span></pre>
+        </code>
       </div>
 
+      <p>
+        Em vez de usar <italic>JavaScript</italic> nativo para exibir uma caixa
+        de diálogo, queremos usar um controle <italic>SAPUI5</italic> simples.
+        Os controles são usados ​​para definir a aparência e o comportamento de
+        partes da tela.
+      </p>
+      <p>
+        No exemplo acima, o retorno de chamada do evento <italic> init</italic> é onde agora
+        instanciamos um controle de texto <italic>SAPUI5</italic>. O nome do controle é prefixado
+        pelo namespace de sua biblioteca de controle <italic>sap / m / </italic> e as opções são
+        passadas para o construtor com um objeto <italic>JavaScript</italic>. Para nosso
+        controle, definimos a propriedade text com o valor <italic>“Hello World”</italic>.
+      </p>
     </div>
 
     <div class="target">

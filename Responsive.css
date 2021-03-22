@@ -1,15 +1,59 @@
 /* Responsible Design  */
 @media screen and (max-width:480px){
 
-    div {
+    div, p {
         padding: 0px;
+        word-wrap: break-word;
     }
 
-    code {
-        padding:0;
+    div#app-walkthrough, div#app-walkthrough-pass2, div#app-walkthrough-pass3{
+        align-items: center;
+        padding-left:10px;
+        font-size:12px;
+
+        overflow: hidden;
+        width:100vw;    
+        word-wrap: break-word;
     }
 
-    p, ul , li , a{
+    div#app-walkthrough p, div#app-walkthrough-pass2 p , div#app-walkthrough-pass3 p{
+        padding:20px;
+    }
+
+    #app-walkthrough-pass3 img{
+        margin-left:-10px;
+    }
+
+    #app-walkthrough code, #app-walkthrough-pass2 code, #app-walkthrough-pass3 code{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction:column;
+        
+    }
+
+    code p{
+        padding:20px;
+    }
+
+    pre{
+        line-break: strict;
+        width:100vw;
+        margin-left:10px;
+        height:100%;
+    }
+
+    pre span:not(.dec) .atv{
+        line-break: break-all;
+        word-break: break-all;
+    }
+
+    .atv::before {
+        content: "\A";
+        white-space: pre;
+    }
+
+    ul , li , a{
         font-size:12px;
         padding:20px;
     }
