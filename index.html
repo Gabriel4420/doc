@@ -152,10 +152,10 @@
 
       <p style="line-height: 40px">
         4) A parte principal será usada pelo navegador para processar o
-        documento. Usando meta tags, podemos influenciar o comportamento do
+        documento, usando meta tags, podemos influenciar o comportamento do
         navegador. Nesse caso, diremos ao navegador para usar
-        <italic>UTF-8</italic> como o conjunto de caracteres do documento.
-        Também daremos ao nosso aplicativo um título que será exibido no
+        <italic>UTF-8</italic> como o conjunto de caracteres do documento,
+        também daremos ao nosso aplicativo um título que será exibido no
         navegador.
       </p>
 
@@ -291,9 +291,9 @@
         </li>
         <br />
         <li>
-          Especificamos a biblioteca de <italic>IU</italic> necessária sap.m
-          contendo os controles de <italic>IU</italic> necessários para este
-          tutorial.
+          Especificamos a biblioteca de <italic>UI</italic> necessária
+          <italic>sap.m</italic> contendo os controles de
+          <italic>UI</italic> necessários para este tutorial.
         </li>
         <br />
         <li>
@@ -313,17 +313,18 @@
         </li>
         <br />
         <li>
-          Definimos o módulo a ser carregado inicialmente de forma declarativa.
-          Com isso, evitamos código JavaScript executável diretamente no arquivo
-          <italic>HTML</italic>. Isso torna seu aplicativo mais seguro. <br />
+          Definimos o módulo a ser carregado inicialmente de forma declarativa,
+          fazendo isso, evitamos código JavaScript executável diretamente no
+          arquivo
+          <italic>HTML</italic> tornando assim seu aplicativo mais seguro.
+          <br />
           <br /><br />Criaremos o script ao qual este se refere mais adiante
           nesta etapa. Dizemos ao <italic> SAPUI5</italic> core que os recursos
           no
           <italic> namespace</italic>
           <strong>sap.ui.demo.walkthrough</strong> estão localizados na mesma
-          pasta que <italic>index.html </italic>. Isso é, por exemplo,
-          necessário para aplicativos executados no
-          <italic> SAP Fiori launchpad</italic>.
+          pasta que <italic>index.html </italic>. Isso é necessário para
+          aplicativos executados no <italic> SAP Fiori launchpad</italic>.
         </li>
       </ol>
 
@@ -605,6 +606,139 @@
           </p>
         </code>
       </div>
+
+      <h4><italic> webapp/view/App.view.xml </italic></h4>
+
+      <div id="code">
+        <code>
+          <pre class="codeblock">
+          <span class="tag"> &lt;</span><span class="pln">mvc</span><span class="atv"> : </span><span class="dec">View</span><br/>
+            <span class="str">xmlns</span><span class="pun"> = </span> <span class="kwd">"sap.m"</span> <br/>
+            <span class="str">xmlns</span><span class="atv"> : </span><span class="str">mvc</span><span class="pun"> = </span> <span class="kwd">"sap.ui.core.mvc" </span><span class="tag">&gt;</span><br/>
+           <span class="tag">&lt;</span><span class="dec">Text</span> <span class="str">text</span><span class="pun"> = </span><span class="kwd">"Hello World !"</span><span class="tag">&gt;</span> <br/>
+           <span class="tag">&lt;</span><span class="pln">/mvc</span><span class="atv"> : </span><span class="dec">View</span><span class="tag">&gt;</span>
+         </pre>
+        </code>
+      </div>
+
+      <p>
+        Dentro da tag <italic> view </italic>, adicionamos a definição
+        declarativa de nosso controle de texto com as mesmas propriedades da
+        etapa anterior. <br /><br />
+        As marcas <italic>XML</italic> são mapeadas para controles e os
+        atributos são mapeados para as propriedades do controle.
+      </p>
+
+      <h4><italic>webapp/index.js</italic></h4>
+
+      <div id="code">
+        <code>
+          <pre
+            class="codeblock"
+          ><span class="pln">sap</span><span class="pun">.</span><span class="pln">ui</span><span class="pun">.</span><span class="pln">define</span><span class="pun">([</span><span class="pln">
+          </span><span class="emphasis"><span class="pln">	</span><span class="str">"sap/ui/core/mvc/XMLView"</span></span><span class="pln">
+          </span><span class="pun">],</span><span class="pln"> </span><span class="kwd">function</span><span class="pln"> </span><span class="pun">(</span><span class="emphasis"><span class="typ">XMLView</span></span><span class="pun">)</span><span class="pln"> </span><span class="pun">{</span><span class="pln">
+            </span><span class="str">"use strict"</span><span class="pun">;</span><span class="pln">
+          
+          </span><span class="emphasis"><span class="pln">	</span><span class="typ">XMLView</span><span class="pun">.</span><span class="pln">create</span><span class="pun">({</span><span class="pln">
+              viewName</span><span class="pun">:</span><span class="pln"> </span><span class="str">"sap.ui.demo.walkthrough.view.App"</span><span class="pln">
+            </span><span class="pun">}).</span><span class="kwd">then</span><span class="pun">(</span><span class="kwd">function</span><span class="pln"> </span><span class="pun">(</span><span class="typ">oView</span><span class="pun">)</span><span class="pln"> </span><span class="pun">{</span><span class="typ">
+              oView</span><span class="pun">.</span><span class="pln">placeAt</span><span class="pun">(</span><span class="str">"content"</span><span class="pun">);</span><span class="pln">
+            </span><span class="pun">});</span><span class="pln">
+          </span></span><span class="pln">
+          </span><span class="pun">});</span></pre>
+        </code>
+      </div>
+
+      <p>
+        Substituímos a instanciação do controle
+        <italic> sap.m.Text </italic> por nossa nova visualização
+        <italic>App XML</italic>.
+      </p>
+
+      <p>
+        A visão é criada por uma função de fábrica do
+        <italic>SAPUI5</italic> que garante que a visão está configurada
+        corretamente e pode ser estendida pelos clientes.
+      </p>
+
+      <p>
+        O nome é prefixado com o namespace
+        <italic>sap.ui.demo.walkthrough.view</italic> para identificar
+        exclusivamente este recurso.
+      </p>
+
+      <div id="code">
+        <code>
+          <h3>&#x2757; Nota</h3>
+          <p>
+            A partir desta etapa, é necessário executar o aplicativo em um
+            servidor <italic style="color: rgb(197, 25, 25)">web</italic>.
+            Estruturamos o aplicativo com vários arquivos que são carregados do
+            sistema de arquivos local.
+          </p>
+
+          <p>
+            Sem um servidor
+            <italic style="color: rgb(197, 25, 25)">Web</italic> , a execução é
+            impedida pelo navegador por motivos de segurança. Se a mensagem de
+            erro:
+            <italic style="color: rgb(197, 25, 25)"
+              >"sap não está definido"</italic
+            >
+            aparecer nas ferramentas de desenvolvedor do navegador, é necessário
+            verificar o caminho do recurso no
+            <italic style="color: rgb(197, 25, 25)">bootstrap</italic>.
+          </p>
+
+          <p>
+            Em vez de instalar um servidor da
+            <italic style="color: rgb(197, 25, 25)">Web</italic>, você pode usar
+            <italic style="color: rgb(197, 25, 25)"
+              >UI5 ToolingInformation</italic
+            >
+            publicado em um site não
+            <italic style="color: rgb(197, 25, 25)">SAP</italic> para iniciar um
+            servidor de desenvolvimento local.
+          </p>
+
+          <p>
+            Consulte o
+            <a
+              href="https://sapui5.hana.ondemand.com/#/topic/7bb04e05f9484e1b95b38a2e48ecef4f.html"
+              target="_blank"
+              rel="noreferrer"
+              class="link2"
+              >Ambiente de desenvolvimento</a
+            >
+            para obter mais informações.
+          </p>
+        </code>
+      </div>
+
+      <h4>Convenções</h4>
+      <ul>
+        <li>
+          Os nomes das visualizações estão em letras maiúsculas 
+        </li>
+
+        <li>
+          Todas as visualizações são armazenadas na pasta de visualização
+        </li>
+
+        <li>
+          Os nomes das visualizações <italic> XML </italic> sempre terminam com <italic>* .view.xml</italic>
+        </li>
+
+        <li>
+          O namespace <italic>XML</italic> padrão é <italic>sap.m</italic>
+        </li>
+
+        <li>
+          Outros <italic>namespaces</italic> <italic>XML</italic> usam a última parte do <italic>namespace</italic>
+          <italic>SAP </italic>como alias (por exemplo, <italic>mvc para sap.ui.core.mvc</italic>)
+        </li>
+      </ul>
     </div>
     <!-- Corner GitHub -->
     <div class="target">

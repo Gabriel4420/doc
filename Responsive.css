@@ -5,7 +5,9 @@
     h4{
         font-size:14px;
     }
-    
+    a.link2{
+        font-size:14px;
+    }
 
     .target{
         display:none !important;
@@ -46,7 +48,8 @@
 
     #app-walkthrough code, 
     #app-walkthrough-pass2 code, 
-    #app-walkthrough-pass3 code{
+    #app-walkthrough-pass3 code,
+    #app-walkthrough-pass4 code{
         display: flex;
         align-items: center;
         justify-content: center;
@@ -105,7 +108,11 @@
     .target{
         display:none !important;
     }
-    
+
+    a.link2{
+        font-size:14px;
+    }
+
     h4{
         font-size:18px;
     }
